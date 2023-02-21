@@ -11,8 +11,9 @@ export function ApiStack({stack, app}) {
                 permissions: [table],
                 environment: {
                     TABLE_NAME: table.tableName
-                }
-            }
+                },
+            },
+            authorizer: "iam"
         },
         routes: {
             "POST /notes": "functions/create.main",
