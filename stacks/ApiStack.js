@@ -6,6 +6,7 @@ export function ApiStack({stack, app}) {
     const {table} = use(StorageStack)
 
     const api = new Api(stack, "Api", {
+        cors: true,
         defaults: {
             function: {
                 permissions: [table],
